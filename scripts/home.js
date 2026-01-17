@@ -1,4 +1,4 @@
-import { call_api } from './config.js'
+import { call_api } from "./config.js"
 
 const HomeAPIRoutes = {
     "Trending Movies": { url: "/trending/movie/week" },
