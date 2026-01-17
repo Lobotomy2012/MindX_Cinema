@@ -12,7 +12,5 @@ fetch(
     "https://api.themoviedb.org/3" + HomeAPIRoutes["Trending Movies"].url +
         "?api_key=" + call_api.api_key
 )
-.then((response) => response.json())
-.then((data) => {
-    console.log("Trending Movies Data:", data)
-})
+.then((response) => {console.log(response.json())})
+.then((data) => {console.log("Trending Movies Data:", data)})
