@@ -18,7 +18,7 @@ signup_form.addEventListener('submit', function(e) {
         return false
     }
     let users = JSON.parse(localStorage.getItem("users")) || [];
-    if (users && users.includes(email.value)) {
+    if (users.some(user => user.email === email.value)) {
         alert('Email already registered.')
         return false
     }
@@ -29,5 +29,7 @@ signup_form.addEventListener('submit', function(e) {
     ])
     localStorage.setItem("users", JSON.stringify(users))
     console.log(users)
+    alert('Registration successful!')
+    window.location.href = 'login.html'
     return true
 })
