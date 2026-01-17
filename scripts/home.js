@@ -1,4 +1,4 @@
-import { call_api } from "./config.js"
+import { call_api } from './config.js'
 
 const HomeAPIRoutes = {
     "Trending Movies": { url: "/trending/movie/week" },
@@ -12,5 +12,5 @@ fetch(
     "https://api.themoviedb.org/3" + HomeAPIRoutes["Trending Movies"].url +
         "?api_key=" + call_api.api_key
 )
-.then((response) => {console.log(response.json())})
+.then((response) => console.log(response.json()))
 .then((data) => {console.log("Trending Movies Data:", data)})
