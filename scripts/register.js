@@ -18,7 +18,7 @@ signup_form.addEventListener('submit', function(e) {
         return false
     }
     let users = JSON.parse(localStorage.getItem("users")) || [];
-    if (users.some(user => user.email === email.value)) {
+    if (users.some(user => user[1] === email.value)) {
         alert('Email already registered.')
         return false
     }
