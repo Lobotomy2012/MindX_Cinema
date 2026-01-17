@@ -17,16 +17,17 @@ signup_form.addEventListener('submit', function(e) {
         alert('Please enter a valid email address.')
         return false
     }
-    const users = localStorage.getItem("users");
+    let users = localStorage.getItem("users");
     if (users && users.includes(email.value)) {
         alert('Email already registered.')
         return false
     }
-    users.push(JSON.stringify(JSON.parse([
+    users.push(JSON.parse([
         username.value,
         email.value,
         password.value
-    ])))
+    ]))
+    localStorage.setItem("users", JSON.stringify(users))
     console.log(users)
     return true
 })
