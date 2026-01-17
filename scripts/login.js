@@ -4,8 +4,8 @@ const signin_form = document.getElementById('sign-in')
 
 signin_form.addEventListener('submit', function(e) {
     e.preventDefault()
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    if (users.some(user => user[1] !== email.value)) {
+    const users = JSON.parse(localStorage.getItem("users")) || {};
+    if (users.some(user => user.email !== email.value)) {
         alert('Email not registered.')
         return false
     }
