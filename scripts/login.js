@@ -11,6 +11,6 @@ signin_form.addEventListener('submit', function(e) {
     }
     console.log(users)
     alert('Login successful!')
-    window.location.href = 'home.html'
+    window.location.href = 'index.html'
     return true
 })
